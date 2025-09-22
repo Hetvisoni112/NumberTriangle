@@ -90,21 +90,21 @@ public class NumberTriangle {
      *
      */
     public int retrieve(String path) {
-//        NumberTriangle current = this; // start at the root node
-//        for (char dir : path.toCharArray()) {
-//            if (dir != 'l' && dir != 'r') {
-//                return -1; // invalid path character
-//            }
-//            if (dir == 'r') {
-//                current = current.right;
-//            } else {
-//                current = current.left;
-//            }
-//            if (current == null) {
-//                return -1;
-//            }
-//        }
-//        return current.root;
+        NumberTriangle current = this; // start at the root node
+        for (char dir : path.toCharArray()) {
+            if (dir != 'l' && dir != 'r') {
+                return -1; // invalid path character
+            }
+            if (dir == 'r') {
+                current = current.right;
+            } else {
+                current = current.left;
+            }
+            if (current == null) {
+                return -1;
+            }
+        }
+        return current.root;
     }
 
 
